@@ -1,0 +1,174 @@
+@charset "UTF8";
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e8f1f2;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #10454F;
+    height: 100px;
+}
+
+header h1 {
+    color: white;
+    font-size: 3em;
+    font-family: 'Anton';
+    font-weight: normal;
+}
+
+.menu {
+    display: none;
+    background-color: #BDE038;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+}
+
+.menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 300px;
+}
+
+.menu li:hover {
+    background-color: #bec981;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#botao_toggle {
+    width: 100%;
+    background-color: #10454F;
+    cursor: pointer;
+}
+
+nav.ativo .menu {
+    display: flex;
+    animation-name: animar;
+    animation-duration: 1s;
+}
+
+@keyframes animar {
+    0% {
+        opacity: 0;
+        width: 0%;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.insercao,
+.lista {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+    background-color: white;
+    height: 300px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.lista {
+    display: none;
+    height: 250px;
+    overflow-y: auto;
+}
+
+.campos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    gap: 30px;
+    flex-direction: column;
+}
+
+label {
+    color: #10454F;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.c-form {
+    padding: 5px;
+    border: solid 0.5px #A9A9A9;
+    border-radius: 5px;
+    outline: 0;
+    width: 70%;
+}
+
+.c-form:focus {
+    border: solid 2px #A9A9A9;
+
+}
+
+#botao {
+    display: flex;
+    justify-content: center;
+}
+
+.btn_salvar {
+    width: 70%;
+    border: none;
+    padding: 8px;
+    background-color: #BDE038;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.btnAlterar {
+    background-color: #BDE038;
+}
+
+.btnExcluir {
+    background-color: #10454F;
+    color: white;
+}
+
+.btnAlterar:hover {
+    background-color: #BDE038;
+}
+
+.btnExcluir:hover {
+    background-color: #10454F;
+    color: white;
+}
+
+.footer {
+    margin-top: 50px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}

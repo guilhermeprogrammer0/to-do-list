@@ -1,0 +1,38 @@
+@charset "UTF8";
+
+@media screen and (min-width:768px) {
+    #botao_toggle {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        height: 100px;
+    }
+
+    main {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .insercao,
+    .lista {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        max-width: 500px;
+        background-color: white;
+        height: 300px;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    .lista {
+        display: none;
+    }
+
+}
